@@ -1,4 +1,4 @@
-const examData = {
+window.examData = {
   'let-march-2026': {
     slug: 'let-march-2026',
     title: 'Licensure Exam for Professional Teachers',

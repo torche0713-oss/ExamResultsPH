@@ -258,8 +258,8 @@
   <script>
   document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
-    const slug = params.get('exam') || 'let-march-2026';
-    const exam = examData[slug];
+    const slug = params.get('exam');
+    const exam = window.examData[slug];
     if (!exam) {
       document.getElementById('exam-content').style.display = 'none';
       document.getElementById('empty-exam').style.display = 'block';
