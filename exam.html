@@ -3,22 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Licensure Exam for Professional Teachers — March 2026 Results</title>
-  <meta name="description" content="March 2026 LET results: 48,392 passers, 12 topnotchers, 1,842 schools. Search the official list of passers for the Licensure Exam for Professional Teachers.">
+  <title id="page-title">Exam Results — ExamResults.PH</title>
+  <meta name="description" id="page-desc" content="View Philippine board exam results, passers, topnotchers, and school rankings.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="canonical" href="https://examresults.ph/exam/let-march-2026/">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    "headline": "March 2026 Licensure Exam for Professional Teachers Results",
-    "datePublished": "2026-03-28",
-    "author": {"@type": "Organization", "name": "ExamResults.PH"}
-  }
-  </script>
+  <link rel="canonical" id="page-canonical" href="https://examresults.ph/exam/">
 </head>
 <body>
 
@@ -43,312 +34,165 @@
 
   <div class="page-header" style="border-bottom:none">
     <div class="container">
-      <div class="breadcrumbs">
+      <div class="breadcrumbs" id="breadcrumbs">
         <a href="index.html">Home</a>
         <span>›</span>
         <a href="results.html">Results</a>
         <span>›</span>
-        <span>LET March 2026</span>
+        <span id="breadcrumb-exam">Exam</span>
       </div>
       <div style="display:flex; align-items:flex-start; gap:12px; flex-wrap:wrap">
-        <h1 style="flex:1">Licensure Exam for Professional Teachers</h1>
-        <span class="result-card-badge" style="font-size:0.8rem; padding:6px 16px">✓ Official Source</span>
+        <h1 id="exam-title" style="flex:1">Loading...</h1>
+        <span id="source-badge" class="result-card-badge" style="font-size:0.8rem; padding:6px 16px">✓ Official Source</span>
       </div>
-      <p style="color:var(--text-secondary); margin-top:8px; display:flex; gap:20px; flex-wrap:wrap; font-size:0.9rem">
-        <span>📅 March 2026</span>
-        <span>📄 Released March 28, 2026</span>
-        <span>🔗 <a href="https://www.prc.gov.ph/examination-result" target="_blank" rel="noopener">PRC Official Page →</a></span>
-        <span style="color:var(--text-muted)">Last updated: March 28, 2026</span>
+      <p id="exam-meta" style="color:var(--text-secondary); margin-top:8px; display:flex; gap:20px; flex-wrap:wrap; font-size:0.9rem">
+        <span id="exam-date">📅 Loading...</span>
+        <span id="exam-release">📄 Loading...</span>
+        <span>🔗 <a id="exam-source" href="#" target="_blank" rel="noopener">Official Source →</a></span>
+        <span id="exam-updated" style="color:var(--text-muted)"></span>
       </p>
     </div>
   </div>
 
   <section class="section" style="padding-top:0">
     <div class="container">
-      <div class="grid grid-4" style="gap:16px; margin-bottom:32px">
-        <div class="stat-card">
-          <div class="stat-icon blue">👥</div>
-          <div class="stat-value" data-count="48392">0</div>
-          <div class="stat-label">Total Passers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon green">🏆</div>
-          <div class="stat-value">12</div>
-          <div class="stat-label">Topnotchers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon amber">🎓</div>
-          <div class="stat-value">1,842</div>
-          <div class="stat-label">Top Performing Schools</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon purple">📊</div>
-          <div class="stat-value">74.8%</div>
-          <div class="stat-label">Pass Rate</div>
-        </div>
+      <div id="empty-exam" class="empty-state" style="display:none">
+        <div class="empty-state-icon">📋</div>
+        <h3>Exam not found</h3>
+        <p>The exam you're looking for doesn't exist or hasn't been added yet.</p>
+        <div style="margin-top:16px"><a href="results.html" class="btn btn-outline">Browse All Exams</a></div>
       </div>
 
-      <div class="layout-two">
-        <div>
-          <div class="filter-bar">
-            <input type="text" id="live-search" class="search-input" placeholder="Search by name..." aria-label="Search passers">
-            <select class="filter-select" data-col="3" aria-label="Filter by school">
-              <option value="">All Schools</option>
-              <option value="UP">UP Diliman</option>
-              <option value="PUP">PUP</option>
-              <option value="UST">UST</option>
-              <option value="DLSU">DLSU</option>
-            </select>
-            <select class="filter-select" data-col="4" aria-label="Filter by region">
-              <option value="">All Regions</option>
-              <option value="NCR">NCR</option>
-              <option value="Region IV-A">Region IV-A</option>
-              <option value="Region VII">Region VII</option>
-            </select>
-            <select class="filter-select" aria-label="Sort by">
-              <option value="">Sort: Name</option>
-              <option value="school">Sort: School</option>
-              <option value="rank">Sort: Rank</option>
-            </select>
+      <div id="exam-content">
+        <div class="grid grid-4" id="stat-cards" style="gap:16px; margin-bottom:32px">
+          <div class="stat-card">
+            <div class="stat-icon blue">👥</div>
+            <div class="stat-value" id="stat-passers">—</div>
+            <div class="stat-label">Total Passers</div>
           </div>
-
-          <div id="table-search">
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>School</th>
-                    <th>Region</th>
-                    <th>Rating</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="searchable-row">
-                    <td style="font-weight:700; color:var(--primary)">1</td>
-                    <td><strong>Maria Concepcion Santos</strong></td>
-                    <td>University of the Philippines - Diliman</td>
-                    <td>NCR</td>
-                    <td>96.8%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td style="font-weight:700; color:var(--primary)">2</td>
-                    <td><strong>Juan Miguel Dela Cruz</strong></td>
-                    <td>Polytechnic University of the Philippines</td>
-                    <td>NCR</td>
-                    <td>95.2%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td style="font-weight:700; color:var(--primary)">3</td>
-                    <td><strong>Isabella Reyes</strong></td>
-                    <td>University of Santo Tomas</td>
-                    <td>NCR</td>
-                    <td>94.7%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td>4</td>
-                    <td>Carlos Andres Garcia</td>
-                    <td>De La Salle University</td>
-                    <td>NCR</td>
-                    <td>93.5%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td>5</td>
-                    <td>Sofia Beatriz Lopez</td>
-                    <td>University of the Philippines - Los Banos</td>
-                    <td>Region IV-A</td>
-                    <td>92.8%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td>6</td>
-                    <td>Miguel Angelo Fernandez</td>
-                    <td>University of San Carlos</td>
-                    <td>Region VII</td>
-                    <td>92.1%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td>7</td>
-                    <td>Angela Kristina Villanueva</td>
-                    <td>Ateneo de Manila University</td>
-                    <td>NCR</td>
-                    <td>91.6%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td>8</td>
-                    <td>Rafael Luis Tan</td>
-                    <td>University of Santo Tomas</td>
-                    <td>NCR</td>
-                    <td>91.2%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td>9</td>
-                    <td>Patricia Marie Gonzales</td>
-                    <td>Polytechnic University of the Philippines</td>
-                    <td>NCR</td>
-                    <td>90.5%</td>
-                  </tr>
-                  <tr class="searchable-row">
-                    <td>10</td>
-                    <td>Gabriel Antonio Ramos</td>
-                    <td>University of the Philippines - Diliman</td>
-                    <td>NCR</td>
-                    <td>90.1%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="stat-card">
+            <div class="stat-icon green">🏆</div>
+            <div class="stat-value" id="stat-topnotchers">—</div>
+            <div class="stat-label">Topnotchers</div>
           </div>
-
-          <div id="search-empty" class="empty-state" style="display:none">
-            <div class="empty-state-icon">🔍</div>
-            <h3>No match found</h3>
-            <p>Try a different spelling or check the archive for other exam dates.</p>
+          <div class="stat-card">
+            <div class="stat-icon amber">🎓</div>
+            <div class="stat-value" id="stat-schools">—</div>
+            <div class="stat-label">Top Performing Schools</div>
           </div>
-
-          <div class="pagination">
-            <a href="#" style="opacity:0.4">‹</a>
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <span class="dots">…</span>
-            <a href="#">484</a>
-            <a href="#">›</a>
+          <div class="stat-card">
+            <div class="stat-icon purple">📊</div>
+            <div class="stat-value" id="stat-passrate">—</div>
+            <div class="stat-label">Pass Rate</div>
           </div>
         </div>
 
-        <aside>
-          <div class="sidebar-panel">
-            <h3>Tools</h3>
-            <div class="sidebar-item" style="cursor:pointer">
-              <span class="sidebar-item-icon">🔍</span>
-              <a href="verification.html" style="color:inherit; text-decoration:none">Verify Your Rating</a>
-            </div>
-            <div class="sidebar-item" style="cursor:pointer">
-              <span class="sidebar-item-icon">📄</span>
-              <a href="#" class="download-csv" style="color:inherit; text-decoration:none">Download CSV</a>
-            </div>
-            <div class="sidebar-item" style="cursor:pointer">
-              <span class="sidebar-item-icon">🖨️</span>
-              <a href="#" onclick="window.print();return false" style="color:inherit; text-decoration:none">Print Page</a>
-            </div>
-            <div class="sidebar-item" style="cursor:pointer">
-              <span class="sidebar-item-icon">🔔</span>
-              <a href="#" class="set-alert" data-exam="LET March 2026" style="color:inherit; text-decoration:none">Set Result Alert</a>
+        <div class="layout-two">
+          <div>
+            <div class="filter-bar" id="filter-bar">
+              <input type="text" id="live-search" class="search-input" placeholder="Search by name..." aria-label="Search passers">
+              <select class="filter-select" data-col="3" aria-label="Filter by school">
+                <option value="">All Schools</option>
+              </select>
+              <select class="filter-select" data-col="4" aria-label="Filter by region">
+                <option value="">All Regions</option>
+              </select>
+              <select class="filter-select" aria-label="Sort by">
+                <option value="">Sort: Rank</option>
+                <option value="name">Sort: Name</option>
+                <option value="school">Sort: School</option>
+              </select>
             </div>
 
-            <h3 style="margin-top:24px">Share</h3>
-            <div style="display:flex; gap:8px">
-              <button class="btn btn-sm btn-outline share-btn" data-platform="facebook" style="flex:1">Facebook</button>
-              <button class="btn btn-sm btn-outline share-btn" data-platform="twitter" style="flex:1">Twitter</button>
-              <button class="btn btn-sm btn-outline share-btn" data-platform="copy" style="flex:1">Copy</button>
+            <div id="table-search">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Rank</th>
+                      <th>Name</th>
+                      <th>School</th>
+                      <th>Region</th>
+                      <th>Rating</th>
+                    </tr>
+                  </thead>
+                  <tbody id="passers-tbody"></tbody>
+                </table>
+              </div>
             </div>
 
-            <h3 style="margin-top:24px">Related Exams</h3>
-            <div class="sidebar-item">
-              <span class="sidebar-item-icon">📋</span>
-              <a href="exam.html" style="color:inherit; text-decoration:none">LET September 2025</a>
+            <div id="search-empty" class="empty-state" style="display:none">
+              <div class="empty-state-icon">🔍</div>
+              <h3>No match found</h3>
+              <p>Try a different spelling or check the archive for other exam dates.</p>
             </div>
-            <div class="sidebar-item">
-              <span class="sidebar-item-icon">📋</span>
-              <a href="exam.html" style="color:inherit; text-decoration:none">CLE March 2026</a>
-            </div>
-            <div class="sidebar-item">
-              <span class="sidebar-item-icon">📋</span>
-              <a href="exam.html" style="color:inherit; text-decoration:none">CSE-PPT August 2026</a>
+
+            <div class="pagination" id="passers-pagination">
+              <a href="#" style="opacity:0.4">‹</a>
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <span class="dots">…</span>
+              <a href="#" id="last-page">—</a>
+              <a href="#">›</a>
             </div>
           </div>
-        </aside>
+
+          <aside>
+            <div class="sidebar-panel">
+              <h3>Tools</h3>
+              <div class="sidebar-item"><span class="sidebar-item-icon">🔍</span> <a href="verification.html" style="color:inherit; text-decoration:none">Verify Your Rating</a></div>
+              <div class="sidebar-item"><span class="sidebar-item-icon">📄</span> <a href="#" class="download-csv" style="color:inherit; text-decoration:none">Download CSV</a></div>
+              <div class="sidebar-item"><span class="sidebar-item-icon">🖨️</span> <a href="#" onclick="window.print();return false" style="color:inherit; text-decoration:none">Print Page</a></div>
+              <div class="sidebar-item"><span class="sidebar-item-icon">🔔</span> <a href="#" class="set-alert" id="sidebar-alert" style="color:inherit; text-decoration:none">Set Result Alert</a></div>
+
+              <h3 style="margin-top:24px">Share</h3>
+              <div style="display:flex; gap:8px">
+                <button class="btn btn-sm btn-outline share-btn" data-platform="facebook" style="flex:1">Facebook</button>
+                <button class="btn btn-sm btn-outline share-btn" data-platform="twitter" style="flex:1">Twitter</button>
+                <button class="btn btn-sm btn-outline share-btn" data-platform="copy" style="flex:1">Copy</button>
+              </div>
+
+              <h3 style="margin-top:24px">Related Exams</h3>
+              <div id="related-exams">
+                <div class="sidebar-item"><span class="sidebar-item-icon">📋</span> <a href="exam.html?exam=let-march-2026" style="color:inherit; text-decoration:none">LET March 2026</a></div>
+                <div class="sidebar-item"><span class="sidebar-item-icon">📋</span> <a href="exam.html?exam=cse-august-2026" style="color:inherit; text-decoration:none">CSE-PPT August 2026</a></div>
+                <div class="sidebar-item"><span class="sidebar-item-icon">📋</span> <a href="exam.html?exam=nursing-june-2025" style="color:inherit; text-decoration:none">Nursing Licensure Exam</a></div>
+              </div>
+            </div>
+          </aside>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--surface); border-top:1px solid var(--border)">
+  <section class="section" id="topnotchers-section" style="background:var(--surface); border-top:1px solid var(--border)">
     <div class="container">
       <h2 class="section-title">Topnotchers</h2>
-      <p class="section-subtitle">Highest performing passers in the March 2026 LET</p>
-      <div style="max-width:600px">
-        <div class="topnotcher">
-          <div class="medal">🥇</div>
-          <div class="info">
-            <div class="name">Maria Concepcion Santos</div>
-            <div class="school">University of the Philippines - Diliman</div>
-          </div>
-          <div class="rating">96.8%</div>
-        </div>
-        <div class="topnotcher" style="background:linear-gradient(135deg,#f1f5f9,#e2e8f0)">
-          <div class="medal">🥈</div>
-          <div class="info">
-            <div class="name">Juan Miguel Dela Cruz</div>
-            <div class="school">Polytechnic University of the Philippines</div>
-          </div>
-          <div class="rating">95.2%</div>
-        </div>
-        <div class="topnotcher" style="background:linear-gradient(135deg,#fef3c7,#fde68a)">
-          <div class="medal">🥉</div>
-          <div class="info">
-            <div class="name">Isabella Reyes</div>
-            <div class="school">University of Santo Tomas</div>
-          </div>
-          <div class="rating">94.7%</div>
-        </div>
-      </div>
+      <p class="section-subtitle" id="topnotchers-subtitle">Highest performing passers in this exam</p>
+      <div id="topnotchers-list" style="max-width:600px"></div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="schools-section">
     <div class="container">
       <h2 class="section-title">Top Performing Schools</h2>
-      <p class="section-subtitle">Schools with the highest pass rates in the March 2026 LET</p>
-      <div class="grid grid-2" style="gap:16px">
-        <div class="school-card">
-          <div class="rank-badge">1</div>
-          <div class="school-info">
-            <div class="school-name">University of the Philippines - Diliman</div>
-            <div class="school-meta">284 examinees • 276 passed</div>
-          </div>
-          <div class="pass-rate">97.2%</div>
-        </div>
-        <div class="school-card">
-          <div class="rank-badge" style="background:#d1fae5; color:#065f46">2</div>
-          <div class="school-info">
-            <div class="school-name">Ateneo de Manila University</div>
-            <div class="school-meta">192 examinees • 182 passed</div>
-          </div>
-          <div class="pass-rate">94.8%</div>
-        </div>
-        <div class="school-card">
-          <div class="rank-badge" style="background:#fef3c7; color:#92400e">3</div>
-          <div class="school-info">
-            <div class="school-name">University of Santo Tomas</div>
-            <div class="school-meta">512 examinees • 478 passed</div>
-          </div>
-          <div class="pass-rate">93.4%</div>
-        </div>
-        <div class="school-card">
-          <div class="rank-badge" style="background:#ede9fe; color:#6d28d9">4</div>
-          <div class="school-info">
-            <div class="school-name">De La Salle University</div>
-            <div class="school-meta">168 examinees • 154 passed</div>
-          </div>
-          <div class="pass-rate">91.7%</div>
-        </div>
-      </div>
+      <p class="section-subtitle" id="schools-subtitle">Schools with the highest pass rates</p>
+      <div class="grid grid-2" id="schools-list" style="gap:16px"></div>
     </div>
   </section>
 
-  <section class="section" style="background:var(--surface); border-top:1px solid var(--border)">
+  <section class="section" id="oathtaking-section" style="background:var(--surface); border-top:1px solid var(--border)">
     <div class="container">
       <h2 class="section-title">Oath-taking & Registration</h2>
       <p class="section-subtitle">Next steps for new passers</p>
       <div class="layout-two">
         <div>
-          <div class="info-box info">
-            <strong>Schedule:</strong> Oath-taking will be held on April 25-26, 2026 at venues across all regions.
+          <div class="info-box info" id="oathtaking-schedule">
+            <strong>Schedule:</strong> Loading...
           </div>
-          <div class="info-box warning">
-            <strong>Requirements:</strong> Bring your Notice of Admission, valid ID, and 2x2 ID picture.
+          <div class="info-box warning" id="oathtaking-venues">
+            <strong>Venues:</strong> Loading...
           </div>
           <p style="font-size:0.9rem; color:var(--text-secondary)">
             Registration for the Professional Regulation Commission (PRC) license will open immediately after oath-taking.
@@ -366,27 +210,10 @@
     </div>
   </section>
 
-  <section class="section section-sm">
+  <section class="section section-sm" id="faq-section">
     <div class="container">
       <h2 class="section-title">Frequently Asked Questions</h2>
-      <div style="max-width:720px">
-        <div class="faq-item">
-          <button class="faq-question">How do I verify my rating?</button>
-          <div class="faq-answer"><p>Visit the PRC LERIS portal at <a href="https://www.prc.gov.ph/leris" target="_blank" rel="noopener">prc.gov.ph/leris</a>. Log in with your account, navigate to "Verification of Rating," and enter your examination details. You may also visit the <a href="verification.html">full verification guide</a> for step-by-step instructions.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">When is the oath-taking for new passers?</button>
-          <div class="faq-answer"><p>Oath-taking ceremonies are typically scheduled 2-4 weeks after result release. Check the <a href="oathtaking.html">oath-taking page</a> for the specific schedule for this exam.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How do I register for my PRC license?</button>
-          <div class="faq-answer"><p>After oath-taking, file your initial registration online through the LERIS portal. Prepare your documents: Notice of Admission, PRC ID, and payment. The initial registration fee is ₱600.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Can I retake the exam if I failed?</button>
-          <div class="faq-answer"><p>Yes. You may reapply for the next scheduled exam. Check the <a href="schedule.html">exam schedule page</a> for upcoming exam dates and application periods.</p></div>
-        </div>
-      </div>
+      <div id="faq-list" style="max-width:720px"></div>
     </div>
   </section>
 
@@ -426,6 +253,178 @@
 
   <button class="back-to-top" aria-label="Back to top">↑</button>
 
+  <script src="assets/js/exams-data.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('exam') || 'let-march-2026';
+    const exam = examData[slug];
+    if (!exam) {
+      document.getElementById('exam-content').style.display = 'none';
+      document.getElementById('empty-exam').style.display = 'block';
+      document.getElementById('exam-title').textContent = 'Exam Not Found';
+      document.getElementById('topnotchers-section').style.display = 'none';
+      document.getElementById('schools-section').style.display = 'none';
+      document.getElementById('oathtaking-section').style.display = 'none';
+      document.getElementById('faq-section').style.display = 'none';
+      return;
+    }
+
+    document.title = exam.title + ' — ' + exam.month + ' Results';
+    document.getElementById('page-desc').content = exam.month + ' ' + exam.title + ' results: ' + exam.passers.toLocaleString() + ' passers, ' + exam.topnotchersCount + ' topnotchers.';
+    document.getElementById('breadcrumb-exam').textContent = exam.breadcrumb;
+    document.getElementById('exam-title').textContent = exam.title;
+    document.getElementById('exam-date').textContent = '📅 ' + exam.examDate;
+    document.getElementById('exam-source').href = exam.source;
+    document.getElementById('exam-updated').textContent = 'Last updated: ' + exam.releaseDate;
+
+    if (exam.status === 'Upcoming') {
+      document.getElementById('source-badge').textContent = '⏳ Results Pending';
+      document.getElementById('source-badge').style.background = '#d1fae5';
+      document.getElementById('source-badge').style.color = '#065f46';
+      document.getElementById('exam-release').textContent = '📄 ' + exam.releaseDate;
+    } else {
+      document.getElementById('exam-release').textContent = '📄 Released ' + exam.releaseDate;
+    }
+
+    // Stat counters
+    document.getElementById('stat-passers').textContent = exam.passers ? exam.passers.toLocaleString() : '—';
+    document.getElementById('stat-passers').dataset.count = exam.passers || 0;
+    document.getElementById('stat-topnotchers').textContent = exam.topnotchersCount || '—';
+    document.getElementById('stat-schools').textContent = exam.schoolsCount ? exam.schoolsCount.toLocaleString() : '—';
+    document.getElementById('stat-passrate').textContent = exam.passRate;
+
+    // Alert button
+    const alertBtn = document.getElementById('sidebar-alert');
+    alertBtn.dataset.exam = exam.title;
+
+    // Filters: populate school options
+    const schools = [...new Set(exam.passersList.map(p => p.school))];
+    const schoolSelect = document.querySelector('.filter-select[data-col="3"]');
+    schools.forEach(s => {
+      const opt = document.createElement('option');
+      opt.value = s;
+      opt.textContent = s;
+      schoolSelect.appendChild(opt);
+    });
+    const regions = [...new Set(exam.passersList.map(p => p.region))];
+    const regionSelect = document.querySelector('.filter-select[data-col="4"]');
+    regions.forEach(r => {
+      const opt = document.createElement('option');
+      opt.value = r;
+      opt.textContent = r;
+      regionSelect.appendChild(opt);
+    });
+
+    // Passers table
+    const tbody = document.getElementById('passers-tbody');
+    exam.passersList.forEach(p => {
+      const tr = document.createElement('tr');
+      tr.className = 'searchable-row';
+      tr.innerHTML = `
+        <td style="font-weight:${p.rank <= 3 ? '700; color:var(--primary)' : '400'}">${p.rank}</td>
+        <td><strong>${p.name}</strong></td>
+        <td>${p.school}</td>
+        <td>${p.region}</td>
+        <td>${p.rating}</td>`;
+      tbody.appendChild(tr);
+    });
+
+    // Pagination
+    const totalPages = Math.ceil(exam.passersList.length / 10) || 1;
+    document.getElementById('last-page').textContent = totalPages;
+    if (totalPages <= 1) {
+      document.getElementById('passers-pagination').style.display = 'none';
+    }
+
+    // Topnotchers
+    const topList = document.getElementById('topnotchers-list');
+    if (exam.topnotchers.length === 0) {
+      document.getElementById('topnotchers-section').style.display = 'none';
+    } else {
+      const medals = ['🥇', '🥈', '🥉'];
+      exam.topnotchers.forEach((t, i) => {
+        const div = document.createElement('div');
+        const bg = i === 0 ? 'linear-gradient(135deg,#fef3c7,#fde68a)' : i === 1 ? 'linear-gradient(135deg,#f1f5f9,#e2e8f0)' : i === 2 ? 'linear-gradient(135deg,#fef3c7,#fde68a)' : '#f8fafc';
+        div.className = 'topnotcher';
+        div.style.background = bg;
+        div.innerHTML = `
+          <div class="medal">${t.medal || medals[i] || '🏅'}</div>
+          <div class="info">
+            <div class="name">${t.name}</div>
+            <div class="school">${t.school}</div>
+          </div>
+          <div class="rating">${t.rating}</div>`;
+        topList.appendChild(div);
+      });
+    }
+
+    // Schools
+    const schoolsList = document.getElementById('schools-list');
+    if (exam.schools.length === 0) {
+      document.getElementById('schools-section').style.display = 'none';
+    } else {
+      const colors = ['', '#d1fae5;color:#065f46', '#fef3c7;color:#92400e', '#ede9fe;color:#6d28d9'];
+      exam.schools.forEach((s, i) => {
+        const div = document.createElement('div');
+        div.className = 'school-card';
+        const style = colors[i] ? `style="background:${colors[i].split(';')[0]};color:${colors[i].split(';')[1]}"` : '';
+        div.innerHTML = `
+          <div class="rank-badge" ${style}>${s.rank}</div>
+          <div class="school-info">
+            <div class="school-name">${s.name}</div>
+            <div class="school-meta">${s.examinees} examinees • ${s.passed} passed</div>
+          </div>
+          <div class="pass-rate">${s.rate}</div>`;
+        schoolsList.appendChild(div);
+      });
+    }
+
+    // Oath-taking
+    document.getElementById('oathtaking-schedule').innerHTML = '<strong>Schedule:</strong> ' + exam.oathTaking;
+    document.getElementById('oathtaking-venues').innerHTML = '<strong>Venues:</strong> ' + exam.oathTakingVenues;
+
+    // FAQs
+    const faqList = document.getElementById('faq-list');
+    if (exam.faqs.length === 0) {
+      document.getElementById('faq-section').style.display = 'none';
+    } else {
+      exam.faqs.forEach(f => {
+        const item = document.createElement('div');
+        item.className = 'faq-item';
+        item.innerHTML = `
+          <button class="faq-question">${f.q}</button>
+          <div class="faq-answer"><p>${f.a}</p></div>`;
+        faqList.appendChild(item);
+      });
+    }
+
+    // Re-init JS behaviors for dynamic content
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-answer.open').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-question.open').forEach(q2 => q2.classList.remove('open'));
+        if (!isOpen) { answer.classList.add('open'); q.classList.add('open'); }
+      });
+    });
+
+    // Re-trigger live search
+    const liveInput = document.getElementById('live-search');
+    if (liveInput) {
+      liveInput.addEventListener('input', () => {
+        const q = liveInput.value.toLowerCase().trim();
+        document.querySelectorAll('.searchable-row').forEach(row => {
+          row.style.display = !q || row.textContent.toLowerCase().includes(q) ? '' : 'none';
+        });
+        const visible = [...document.querySelectorAll('.searchable-row')].filter(r => r.style.display !== 'none');
+        const empty = document.getElementById('search-empty');
+        if (empty) empty.style.display = visible.length === 0 ? 'block' : 'none';
+      });
+    }
+  });
+  </script>
 </body>
 </html>
