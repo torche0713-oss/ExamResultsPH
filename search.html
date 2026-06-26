@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Passers — ExamResults.PH</title>
+  <meta name="description" content="Search for your name across all Philippine board exam results. Find passers by name, school, province, or region.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="canonical" href="https://examresults.ph/search/">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">E</span>
+        <span>ExamResults.PH</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="results.html">Results</a>
+        <a href="archive.html">Archive</a>
+        <a href="search.html" class="active">Search</a>
+        <a href="verification.html">Verify Rating</a>
+        <a href="oathtaking.html">Oath-taking</a>
+        <a href="news.html">News</a>
+      </nav>
+      <button class="nav-toggle hide-desktop" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Search Passers</span>
+      </div>
+      <h1>Search Exam Passers</h1>
+      <p>Find passers by name, school, province, or region across all board exams.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <input type="text" id="live-search" class="search-input" placeholder="Enter name, school, or province..." aria-label="Search passers" autofocus>
+        <select class="filter-select" aria-label="Filter by exam">
+          <option value="">All Exams</option>
+          <option value="LET">LET</option>
+          <option value="CSE">Civil Service</option>
+          <option value="NAPOLCOM">NAPOLCOM</option>
+          <option value="Nursing">Nursing</option>
+          <option value="CPA">CPA</option>
+        </select>
+        <select class="filter-select" aria-label="Filter by year">
+          <option value="">All Years</option>
+          <option value="2026">2026</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+        </select>
+        <button class="btn btn-primary btn-sm">Search</button>
+      </div>
+
+      <p class="text-sm text-muted" style="margin-bottom:20px">Showing 15 of 285,000+ passers. Type to filter live.</p>
+
+      <div id="search-empty" class="empty-state" style="display:none">
+        <div class="empty-state-icon">🔍</div>
+        <h3>No passers found</h3>
+        <p>Try a different spelling, use a partial name, or check the archive for older exams.</p>
+        <div style="margin-top:16px; display:flex; gap:12px; justify-content:center">
+          <a href="archive.html" class="btn btn-outline">Browse Archive</a>
+          <a href="results.html" class="btn btn-outline">View All Exams</a>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Exam</th>
+              <th>School</th>
+              <th>Region</th>
+              <th>Year</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="searchable-row">
+              <td><strong>Maria Concepcion Santos</strong></td>
+              <td>LET</td>
+              <td>University of the Philippines - Diliman</td>
+              <td>NCR</td>
+              <td>2026</td>
+              <td>96.8%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td><strong>Juan Miguel Dela Cruz</strong></td>
+              <td>LET</td>
+              <td>Polytechnic University of the Philippines</td>
+              <td>NCR</td>
+              <td>2026</td>
+              <td>95.2%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td><strong>Isabella Reyes</strong></td>
+              <td>LET</td>
+              <td>University of Santo Tomas</td>
+              <td>NCR</td>
+              <td>2026</td>
+              <td>94.7%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Carlos Andres Garcia</td>
+              <td>LET</td>
+              <td>De La Salle University</td>
+              <td>NCR</td>
+              <td>2026</td>
+              <td>93.5%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Sofia Beatriz Lopez</td>
+              <td>LET</td>
+              <td>UP Los Banos</td>
+              <td>Region IV-A</td>
+              <td>2026</td>
+              <td>92.8%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Miguel Angelo Fernandez</td>
+              <td>LET</td>
+              <td>University of San Carlos</td>
+              <td>Region VII</td>
+              <td>2026</td>
+              <td>92.1%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Angela Kristina Villanueva</td>
+              <td>LET</td>
+              <td>Ateneo de Manila University</td>
+              <td>NCR</td>
+              <td>2026</td>
+              <td>91.6%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Rafael Luis Tan</td>
+              <td>LET</td>
+              <td>University of Santo Tomas</td>
+              <td>NCR</td>
+              <td>2026</td>
+              <td>91.2%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Patricia Marie Gonzales</td>
+              <td>CSE-PPT</td>
+              <td>Polytechnic University of the Philippines</td>
+              <td>NCR</td>
+              <td>2025</td>
+              <td>Passed</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Gabriel Antonio Ramos</td>
+              <td>CSE-PPT</td>
+              <td>University of the Philippines - Diliman</td>
+              <td>NCR</td>
+              <td>2025</td>
+              <td>Passed</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Jose Miguel Mercado</td>
+              <td>NAPOLCOM</td>
+              <td>Philippine National Police Academy</td>
+              <td>NCR</td>
+              <td>2026</td>
+              <td>91.4%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Lara Bianca Hernandez</td>
+              <td>Nursing</td>
+              <td>University of Santo Tomas</td>
+              <td>NCR</td>
+              <td>2025</td>
+              <td>88.7%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Diego Francisco Cruz</td>
+              <td>CPA</td>
+              <td>De La Salle University</td>
+              <td>NCR</td>
+              <td>2025</td>
+              <td>92.3%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Beatrice Anne Flores</td>
+              <td>Architecture</td>
+              <td>University of the Philippines - Diliman</td>
+              <td>NCR</td>
+              <td>2026</td>
+              <td>89.5%</td>
+            </tr>
+            <tr class="searchable-row">
+              <td>Christian Paolo Villar</td>
+              <td>Psychometrician</td>
+              <td>Ateneo de Manila University</td>
+              <td>NCR</td>
+              <td>2025</td>
+              <td>87.2%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination">
+        <a href="#" style="opacity:0.4">‹</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span class="dots">…</span>
+        <a href="#">19,000</a>
+        <a href="#">›</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm" style="background:var(--surface); border-top:1px solid var(--border)">
+    <div class="container">
+      <div class="grid grid-3" style="gap:24px; text-align:center">
+        <div>
+          <span style="font-size:2rem; display:block; margin-bottom:8px">🔍</span>
+          <h3 style="font-size:0.95rem; font-weight:600">Name Search</h3>
+          <p class="text-sm text-muted" style="margin-top:4px">Search by full or partial name across all exam results.</p>
+        </div>
+        <div>
+          <span style="font-size:2rem; display:block; margin-bottom:8px">🎓</span>
+          <h3 style="font-size:0.95rem; font-weight:600">School Lookup</h3>
+          <p class="text-sm text-muted" style="margin-top:4px">Filter passers by school or university.</p>
+        </div>
+        <div>
+          <span style="font-size:2rem; display:block; margin-bottom:8px">📍</span>
+          <h3 style="font-size:0.95rem; font-weight:600">Region Filter</h3>
+          <p class="text-sm text-muted" style="margin-top:4px">Browse passers by province or region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">E</span> ExamResults.PH</div>
+          <p>Philippine board exam results aggregator. Search passers, topnotchers, and school rankings.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Results</h4>
+          <a href="results.html">Latest Results</a>
+          <a href="archive.html">Archive</a>
+          <a href="search.html">Search Passers</a>
+          <a href="schools.html">School Performance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="verification.html">Verify Rating</a>
+          <a href="oathtaking.html">Oath-taking</a>
+          <a href="schedule.html">Exam Schedule</a>
+          <a href="news.html">News & Updates</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="about.html">About Us</a>
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year">2026</span> ExamResults.PH. Not affiliated with PRC or any government agency.
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

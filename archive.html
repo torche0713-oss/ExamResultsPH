@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Results Archive — ExamResults.PH</title>
+  <meta name="description" content="Browse Philippine board exam results by year and month. Complete archive of PRC, CSC, NAPOLCOM, and other exam results.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="canonical" href="https://examresults.ph/archive/">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">E</span>
+        <span>ExamResults.PH</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="results.html">Results</a>
+        <a href="archive.html" class="active">Archive</a>
+        <a href="search.html">Search</a>
+        <a href="verification.html">Verify Rating</a>
+        <a href="oathtaking.html">Oath-taking</a>
+        <a href="news.html">News</a>
+      </nav>
+      <button class="nav-toggle hide-desktop" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Archive</span>
+      </div>
+      <h1>Exam Results Archive</h1>
+      <p>Browse all exam results by year, month, and exam type.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <input type="text" id="live-search" class="search-input" placeholder="Search archive..." aria-label="Search archive">
+        <select class="filter-select" aria-label="Filter by year">
+          <option value="">All Years</option>
+          <option value="2026">2026</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+        </select>
+        <select class="filter-select" aria-label="Filter by type">
+          <option value="">All Types</option>
+          <option value="PRC">PRC Licensure</option>
+          <option value="CSC">Civil Service</option>
+          <option value="NAPOLCOM">NAPOLCOM</option>
+          <option value="SPLE">SPLE</option>
+        </select>
+        <div style="display:flex; gap:8px; margin-left:auto">
+          <button class="btn btn-sm btn-ghost">Recently Added</button>
+          <button class="btn btn-sm btn-ghost">Most Viewed</button>
+        </div>
+      </div>
+
+      <div id="search-empty" class="empty-state" style="display:none">
+        <div class="empty-state-icon">📚</div>
+        <h3>No results found</h3>
+        <p>Try adjusting your search or filters.</p>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs">
+          <button class="tab active" data-tab="year">By Year</button>
+          <button class="tab" data-tab="month">By Month</button>
+          <button class="tab" data-tab="type">By Exam Type</button>
+        </div>
+
+        <div class="tab-content active" data-tab-content="year">
+          <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap:16px">
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <div class="card-header flex items-center justify-between">
+                <span class="card-title" style="font-size:1.3rem">2026</span>
+                <span class="result-card-badge">12 exams</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top:8px">Latest results including LET, NAPOLCOM, Architecture, and more.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <div class="card-header flex items-center justify-between">
+                <span class="card-title" style="font-size:1.3rem">2025</span>
+                <span class="result-card-badge">28 exams</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top:8px">Full year of results including Nursing, CPA, CSE, and Psychometrician.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <div class="card-header flex items-center justify-between">
+                <span class="card-title" style="font-size:1.3rem">2024</span>
+                <span class="result-card-badge">31 exams</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top:8px">Includes LET, Engineering licensure, Social Worker, and Med Tech exams.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <div class="card-header flex items-center justify-between">
+                <span class="card-title" style="font-size:1.3rem">2023</span>
+                <span class="result-card-badge">26 exams</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top:8px">Archived results for all PRC licensure exams and government tests.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <div class="card-header flex items-center justify-between">
+                <span class="card-title" style="font-size:1.3rem">2022</span>
+                <span class="result-card-badge">24 exams</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top:8px">Post-pandemic exam results and board licensure data.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <div class="card-header flex items-center justify-between">
+                <span class="card-title" style="font-size:1.3rem">2021</span>
+                <span class="result-card-badge">18 exams</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top:8px">Limited exams due to pandemic restrictions. Select board exams only.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <div class="card-header flex items-center justify-between">
+                <span class="card-title" style="font-size:1.3rem">2020</span>
+                <span class="result-card-badge">14 exams</span>
+              </div>
+              <p class="text-sm text-muted" style="margin-top:8px">COVID-19 affected schedule. Limited licensure exams conducted.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="tab-content" data-tab-content="month">
+          <div class="grid grid-3" style="gap:16px">
+            <div class="card">
+              <h3 style="font-size:1rem; font-weight:600">January</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">Architecture, NAPOLCOM, Social Worker</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem; font-weight:600">March</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">LET, CLE, CSE-PPT</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem; font-weight:600">May</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">Engineering (CE, EE, ME), Med Tech</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem; font-weight:600">June</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">Nursing, Pharmacy, RadTech</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem; font-weight:600">August</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">CSE-PPT, Psychometrician, Social Worker</p>
+            </div>
+            <div class="card">
+              <h3 style="font-size:1rem; font-weight:600">October</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">CPA, LET, Architecture, Veterinary</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" data-tab-content="type">
+          <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:16px">
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <h3 style="font-size:1rem; font-weight:600">PRC Licensure Exams</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">All Professional Regulation Commission board exams.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <h3 style="font-size:1rem; font-weight:600">Civil Service Exam (CSE)</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">Professional and Subprofessional levels.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <h3 style="font-size:1rem; font-weight:600">NAPOLCOM</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">National Police Commission entrance exam.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <h3 style="font-size:1rem; font-weight:600">SPLE</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">Special Professional Licensure Exam for foreign passers.</p>
+            </a>
+            <a href="results.html" class="card" style="display:block; text-decoration:none; color:inherit">
+              <h3 style="font-size:1rem; font-weight:600">Bar Examinations</h3>
+              <p class="text-sm text-muted" style="margin-top:8px">Philippine Supreme Court Bar exam results.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">E</span> ExamResults.PH</div>
+          <p>Philippine board exam results aggregator. Search passers, topnotchers, and school rankings.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Results</h4>
+          <a href="results.html">Latest Results</a>
+          <a href="archive.html">Archive</a>
+          <a href="search.html">Search Passers</a>
+          <a href="schools.html">School Performance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="verification.html">Verify Rating</a>
+          <a href="oathtaking.html">Oath-taking</a>
+          <a href="schedule.html">Exam Schedule</a>
+          <a href="news.html">News & Updates</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="about.html">About Us</a>
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year">2026</span> ExamResults.PH. Not affiliated with PRC or any government agency.
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

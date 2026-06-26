@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Performance — ExamResults.PH</title>
+  <meta name="description" content="Philippine school performance rankings in board exams. View pass rates, top performing schools, and regional summaries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="canonical" href="https://examresults.ph/schools/">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">E</span>
+        <span>ExamResults.PH</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="results.html">Results</a>
+        <a href="archive.html">Archive</a>
+        <a href="search.html">Search</a>
+        <a href="verification.html">Verify Rating</a>
+        <a href="oathtaking.html">Oath-taking</a>
+        <a href="news.html">News</a>
+      </nav>
+      <button class="nav-toggle hide-desktop" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>School Performance</span>
+      </div>
+      <h1>School Performance Rankings</h1>
+      <p>Pass rates, rankings, and performance summaries for schools across all board exams.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3" style="gap:16px; margin-bottom:32px">
+        <div class="stat-card">
+          <div class="stat-icon blue">🎓</div>
+          <div class="stat-value">2,500+</div>
+          <div class="stat-label">Schools Tracked</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">📊</div>
+          <div class="stat-value">180</div>
+          <div class="stat-label">Exams Analyzed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon amber">🏆</div>
+          <div class="stat-value">98.4%</div>
+          <div class="stat-label">Highest Pass Rate</div>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <input type="text" id="live-search" class="search-input" placeholder="Search school..." aria-label="Search school">
+        <select class="filter-select" aria-label="Filter by region">
+          <option value="">All Regions</option>
+          <option value="NCR">NCR</option>
+          <option value="Region IV-A">Region IV-A</option>
+          <option value="Region VII">Region VII</option>
+          <option value="Region XI">Region XI</option>
+        </select>
+        <select class="filter-select" aria-label="Filter by exam">
+          <option value="">All Exams</option>
+          <option value="LET">LET</option>
+          <option value="CSE">Civil Service</option>
+          <option value="Nursing">Nursing</option>
+        </select>
+      </div>
+
+      <div id="search-empty" class="empty-state" style="display:none">
+        <div class="empty-state-icon">🎓</div>
+        <h3>No schools found</h3>
+        <p>Try adjusting your search or filters.</p>
+      </div>
+
+      <div style="display:grid; gap:12px">
+        <div class="school-card">
+          <div class="rank-badge">1</div>
+          <div class="school-info">
+            <div class="school-name">University of the Philippines - Diliman</div>
+            <div class="school-meta">12 exams tracked • 3,842 examinees • NCR</div>
+          </div>
+          <div class="pass-rate">98.4%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge" style="background:#d1fae5; color:#065f46">2</div>
+          <div class="school-info">
+            <div class="school-name">Polytechnic University of the Philippines</div>
+            <div class="school-meta">15 exams tracked • 8,215 examinees • NCR</div>
+          </div>
+          <div class="pass-rate">92.1%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge" style="background:#fef3c7; color:#92400e">3</div>
+          <div class="school-info">
+            <div class="school-name">University of Santo Tomas</div>
+            <div class="school-meta">10 exams tracked • 4,561 examinees • NCR</div>
+          </div>
+          <div class="pass-rate">91.7%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge" style="background:#ede9fe; color:#6d28d9">4</div>
+          <div class="school-info">
+            <div class="school-name">De La Salle University</div>
+            <div class="school-meta">8 exams tracked • 2,340 examinees • NCR</div>
+          </div>
+          <div class="pass-rate">90.2%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge" style="background:#fce7f3; color:#be185d">5</div>
+          <div class="school-info">
+            <div class="school-name">Ateneo de Manila University</div>
+            <div class="school-meta">7 exams tracked • 1,892 examinees • NCR</div>
+          </div>
+          <div class="pass-rate">89.8%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge">6</div>
+          <div class="school-info">
+            <div class="school-name">University of San Carlos</div>
+            <div class="school-meta">9 exams tracked • 2,104 examinees • Region VII</div>
+          </div>
+          <div class="pass-rate">87.5%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge">7</div>
+          <div class="school-info">
+            <div class="school-name">University of the Philippines - Los Banos</div>
+            <div class="school-meta">6 exams tracked • 1,567 examinees • Region IV-A</div>
+          </div>
+          <div class="pass-rate">86.9%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge">8</div>
+          <div class="school-info">
+            <div class="school-name">Mindanao State University</div>
+            <div class="school-meta">11 exams tracked • 2,890 examinees • Region X</div>
+          </div>
+          <div class="pass-rate">84.2%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge">9</div>
+          <div class="school-info">
+            <div class="school-name">University of the East</div>
+            <div class="school-meta">8 exams tracked • 3,215 examinees • NCR</div>
+          </div>
+          <div class="pass-rate">82.8%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge">10</div>
+          <div class="school-info">
+            <div class="school-name">Far Eastern University</div>
+            <div class="school-meta">9 exams tracked • 3,456 examinees • NCR</div>
+          </div>
+          <div class="pass-rate">81.5%</div>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <a href="#" style="opacity:0.4">‹</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span class="dots">…</span>
+        <a href="#">250</a>
+        <a href="#">›</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border)">
+    <div class="container">
+      <h2 class="section-title">Regional Performance</h2>
+      <p class="section-subtitle">Average pass rates by region across all board exams.</p>
+      <div class="grid grid-3" style="gap:16px">
+        <div class="card" style="text-align:center">
+          <h3 style="font-size:1rem; font-weight:600">National Capital Region</h3>
+          <div style="font-size:2rem; font-weight:700; color:var(--primary); margin:8px 0">87.2%</div>
+          <p class="text-sm text-muted">Average pass rate across 45 schools</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <h3 style="font-size:1rem; font-weight:600">Region IV-A (CALABARZON)</h3>
+          <div style="font-size:2rem; font-weight:700; color:var(--success); margin:8px 0">78.5%</div>
+          <p class="text-sm text-muted">Average pass rate across 32 schools</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <h3 style="font-size:1rem; font-weight:600">Region VII (Central Visayas)</h3>
+          <div style="font-size:2rem; font-weight:700; color:var(--warning); margin:8px 0">76.8%</div>
+          <p class="text-sm text-muted">Average pass rate across 28 schools</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">E</span> ExamResults.PH</div>
+          <p>Philippine board exam results aggregator. Search passers, topnotchers, and school rankings.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Results</h4>
+          <a href="results.html">Latest Results</a>
+          <a href="archive.html">Archive</a>
+          <a href="search.html">Search Passers</a>
+          <a href="schools.html">School Performance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="verification.html">Verify Rating</a>
+          <a href="oathtaking.html">Oath-taking</a>
+          <a href="schedule.html">Exam Schedule</a>
+          <a href="news.html">News & Updates</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="about.html">About Us</a>
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year">2026</span> ExamResults.PH. Not affiliated with PRC or any government agency.
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

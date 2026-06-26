@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamResults.PH — Philippine Board Exam Results</title>
+  <meta name="description" content="Search Philippine board exam passers, topnotchers, and school rankings. Results for PRC licensure exams, civil service, NAPOLCOM, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="canonical" href="https://examresults.ph/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Philippine Board Exam Results",
+    "description": "Latest Philippine board exam results, passers list, topnotchers, and school rankings."
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">E</span>
+        <span>ExamResults.PH</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="results.html">Results</a>
+        <a href="archive.html">Archive</a>
+        <a href="search.html">Search</a>
+        <a href="verification.html">Verify Rating</a>
+        <a href="oathtaking.html">Oath-taking</a>
+        <a href="news.html">News</a>
+      </nav>
+      <button class="nav-toggle hide-desktop" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">✓ Official Source Verified</div>
+        <h1 class="hero-title">Philippine Board Exam Results</h1>
+        <p class="hero-text">Search passers, schools, and rankings in one place. Results for PRC licensure exams, civil service, NAPOLCOM, and more.</p>
+        <form class="hero-search" action="search.html" method="get">
+          <input type="text" name="q" placeholder="Search by name, school, exam, or province..." aria-label="Search exam results">
+          <button type="submit">Search</button>
+        </form>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-count="285000">0</div>
+            <div class="hero-stat-label">Passers Listed</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-count="180">0</div>
+            <div class="hero-stat-label">Exam Categories</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-count="2500">0</div>
+            <div class="hero-stat-label">Schools Tracked</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">2026</div>
+            <div class="hero-stat-label">Latest Results</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="flex items-center justify-between flex-wrap gap-4" style="margin-bottom:32px">
+        <div>
+          <h2 class="section-title">Latest Results</h2>
+          <p class="section-subtitle" style="margin-bottom:0">Recently released board exam results</p>
+        </div>
+        <a href="results.html" class="btn btn-outline">View All Results →</a>
+      </div>
+
+      <div id="countdown-1"></div>
+
+      <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap:16px; margin-top:24px">
+        <a href="exam.html" class="card" style="display:block; text-decoration:none; color:inherit">
+          <div class="card-header flex items-center justify-between">
+            <span class="card-title">Licensure Exam for Professional Teachers</span>
+            <span class="result-card-badge">New</span>
+          </div>
+          <div class="card-subtitle" style="margin-bottom:12px">
+            <span style="display:flex; gap:16px; font-size:0.8rem; color:var(--text-secondary)">
+              <span>📅 March 2026</span>
+              <span>👥 48,392 passers</span>
+            </span>
+          </div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); display:flex; gap:12px; flex-wrap:wrap">
+            <span>🎓 1,842 schools</span>
+            <span>🏆 12 topnotchers</span>
+            <span style="color:var(--success)">✓ Released Mar 28</span>
+          </div>
+        </a>
+        <a href="exam.html" class="card" style="display:block; text-decoration:none; color:inherit">
+          <div class="card-header flex items-center justify-between">
+            <span class="card-title">Civil Service Exam (CSE-PPT)</span>
+            <span class="result-card-badge" style="background:#d1fae5; color:#065f46">Upcoming</span>
+          </div>
+          <div class="card-subtitle" style="margin-bottom:12px">
+            <span style="display:flex; gap:16px; font-size:0.8rem; color:var(--text-secondary)">
+              <span>📅 August 2026</span>
+              <span>👥 Expected Aug 15</span>
+            </span>
+          </div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); display:flex; gap:12px; flex-wrap:wrap">
+            <span>📄 Professional & Subprofessional</span>
+            <span style="color:var(--warning)">⏳ Results pending</span>
+          </div>
+        </a>
+        <a href="exam.html" class="card" style="display:block; text-decoration:none; color:inherit">
+          <div class="card-header flex items-center justify-between">
+            <span class="card-title">NAPOLCOM Exam</span>
+            <span class="result-card-badge">Updated</span>
+          </div>
+          <div class="card-subtitle" style="margin-bottom:12px">
+            <span style="display:flex; gap:16px; font-size:0.8rem; color:var(--text-secondary)">
+              <span>📅 January 2026</span>
+              <span>👥 12,847 passers</span>
+            </span>
+          </div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); display:flex; gap:12px; flex-wrap:wrap">
+            <span>🎓 680 schools</span>
+            <span>🏆 8 topnotchers</span>
+            <span style="color:var(--success)">✓ Released Feb 14</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border)">
+    <div class="container">
+      <div style="max-width:720px; margin:0 auto; text-align:center">
+        <h2 class="section-title" style="text-align:center">Did You Pass?</h2>
+        <p class="section-subtitle" style="text-align:center; margin:0 auto 32px">Look up your name instantly across all exam results.</p>
+        <form action="search.html" method="get" style="display:flex; gap:12px; max-width:480px; margin:0 auto">
+          <input type="text" name="q" placeholder="Enter your full name..." style="flex:1; padding:14px 18px; border:1px solid var(--border); border-radius:var(--radius-md); font-size:1rem; font-family:var(--font); outline:none" aria-label="Search your name">
+          <button type="submit" class="btn btn-primary btn-lg">Look Up</button>
+        </form>
+        <p class="text-muted text-sm" style="margin-top:12px">Search across 285,000+ passers from all PRC, CSC, and board exams.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center">Exam Categories</h2>
+      <p class="section-subtitle" style="text-align:center; margin:0 auto 40px">Browse results by profession or exam type</p>
+      <div class="grid grid-4" style="gap:16px">
+        <a href="results.html" class="feature-card" style="text-decoration:none; color:inherit">
+          <div class="feature-icon blue">👩‍🏫</div>
+          <h3>Education</h3>
+          <p>LET, CLE, and other teaching exams</p>
+        </a>
+        <a href="results.html" class="feature-card" style="text-decoration:none; color:inherit">
+          <div class="feature-icon green">⚕️</div>
+          <h3>Medical & Health</h3>
+          <p>Nursing, Medicine, Pharmacy, PT, RadTech</p>
+        </a>
+        <a href="results.html" class="feature-card" style="text-decoration:none; color:inherit">
+          <div class="feature-icon amber">⚖️</div>
+          <h3>Engineering & Tech</h3>
+          <p>CE, EE, ME, ChE, ITP, Architecture</p>
+        </a>
+        <a href="results.html" class="feature-card" style="text-decoration:none; color:inherit">
+          <div class="feature-icon purple">📋</div>
+          <h3>Government Exams</h3>
+          <p>CSE, NAPOLCOM, SPLE, Bar Exams</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--border)">
+    <div class="container">
+      <div class="flex items-center justify-between flex-wrap gap-4" style="margin-bottom:32px">
+        <div>
+          <h2 class="section-title">Top Performing Schools</h2>
+          <p class="section-subtitle" style="margin-bottom:0">Leading schools across major board exams</p>
+        </div>
+        <a href="schools.html" class="btn btn-outline">View All Schools →</a>
+      </div>
+      <div class="grid grid-2" style="gap:16px">
+        <div class="school-card">
+          <div class="rank-badge">1</div>
+          <div class="school-info">
+            <div class="school-name">University of the Philippines - Diliman</div>
+            <div class="school-meta">12 exams tracked • 98.4% avg pass rate</div>
+          </div>
+          <div class="pass-rate">98.4%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge" style="background:#d1fae5; color:#065f46">2</div>
+          <div class="school-info">
+            <div class="school-name">Polytechnic University of the Philippines</div>
+            <div class="school-meta">15 exams tracked • 92.1% avg pass rate</div>
+          </div>
+          <div class="pass-rate">92.1%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge" style="background:#fef3c7; color:#92400e">3</div>
+          <div class="school-info">
+            <div class="school-name">University of Santo Tomas</div>
+            <div class="school-meta">10 exams tracked • 91.7% avg pass rate</div>
+          </div>
+          <div class="pass-rate">91.7%</div>
+        </div>
+        <div class="school-card">
+          <div class="rank-badge" style="background:#ede9fe; color:#6d28d9">4</div>
+          <div class="school-info">
+            <div class="school-name">De La Salle University</div>
+            <div class="school-meta">8 exams tracked • 90.2% avg pass rate</div>
+          </div>
+          <div class="pass-rate">90.2%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sm">
+    <div class="container">
+      <div class="grid grid-2" style="gap:24px">
+        <a href="verification.html" class="card" style="display:flex; align-items:center; gap:16px; text-decoration:none; color:inherit; padding:20px">
+          <span style="font-size:2rem">🔍</span>
+          <div>
+            <h3 style="font-size:0.95rem; font-weight:600">Verify Your Rating</h3>
+            <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px">Step-by-step guide to check your official rating on PRC LERIS.</p>
+          </div>
+        </a>
+        <a href="oathtaking.html" class="card" style="display:flex; align-items:center; gap:16px; text-decoration:none; color:inherit; padding:20px">
+          <span style="font-size:2rem">📜</span>
+          <div>
+            <h3 style="font-size:0.95rem; font-weight:600">Oath-taking & Registration</h3>
+            <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px">Schedules, venues, and requirements for new passers.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">E</span> ExamResults.PH</div>
+          <p>Philippine board exam results aggregator. Search passers, topnotchers, and school rankings from PRC, CSC, NAPOLCOM, and other board exams.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Results</h4>
+          <a href="results.html">Latest Results</a>
+          <a href="archive.html">Archive</a>
+          <a href="search.html">Search Passers</a>
+          <a href="schools.html">School Performance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="verification.html">Verify Rating</a>
+          <a href="oathtaking.html">Oath-taking</a>
+          <a href="schedule.html">Exam Schedule</a>
+          <a href="news.html">News & Updates</a>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="about.html">About Us</a>
+          <a href="about.html">Editorial Policy</a>
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year">2026</span> ExamResults.PH. Not affiliated with PRC or any government agency. For informational purposes only.
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
