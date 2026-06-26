@@ -48,24 +48,21 @@
     <div class="container">
       <div class="filter-bar">
         <input type="text" id="live-search" class="search-input" placeholder="Enter name, school, or province..." aria-label="Search passers" autofocus>
-        <select class="filter-select" data-col="2" aria-label="Filter by exam">
+        <select class="filter-select" data-col="2" aria-label="Filter by exam" id="exam-filter">
           <option value="">All Exams</option>
-          <option value="LET">LET</option>
-          <option value="CSE">Civil Service</option>
-          <option value="NAPOLCOM">NAPOLCOM</option>
-          <option value="Nursing">Nursing</option>
-          <option value="CPA">CPA</option>
         </select>
-        <select class="filter-select" data-col="5" aria-label="Filter by year">
+        <select class="filter-select" data-col="5" aria-label="Filter by year" id="year-filter">
           <option value="">All Years</option>
           <option value="2026">2026</option>
           <option value="2025">2025</option>
           <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
         </select>
         <button class="btn btn-primary btn-sm">Search</button>
       </div>
 
-      <p class="text-sm text-muted" style="margin-bottom:20px">Showing 15 of 285,000+ passers. Type to filter live.</p>
+      <p class="text-sm text-muted" style="margin-bottom:20px" id="stats-line">Loading passer data...</p>
 
       <div id="search-empty" class="empty-state" style="display:none">
         <div class="empty-state-icon">🔍</div>
@@ -89,128 +86,7 @@
               <th>Rating</th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="searchable-row">
-              <td><strong>Maria Concepcion Santos</strong></td>
-              <td>LET</td>
-              <td>University of the Philippines - Diliman</td>
-              <td>NCR</td>
-              <td>2026</td>
-              <td>96.8%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td><strong>Juan Miguel Dela Cruz</strong></td>
-              <td>LET</td>
-              <td>Polytechnic University of the Philippines</td>
-              <td>NCR</td>
-              <td>2026</td>
-              <td>95.2%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td><strong>Isabella Reyes</strong></td>
-              <td>LET</td>
-              <td>University of Santo Tomas</td>
-              <td>NCR</td>
-              <td>2026</td>
-              <td>94.7%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Carlos Andres Garcia</td>
-              <td>LET</td>
-              <td>De La Salle University</td>
-              <td>NCR</td>
-              <td>2026</td>
-              <td>93.5%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Sofia Beatriz Lopez</td>
-              <td>LET</td>
-              <td>UP Los Banos</td>
-              <td>Region IV-A</td>
-              <td>2026</td>
-              <td>92.8%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Miguel Angelo Fernandez</td>
-              <td>LET</td>
-              <td>University of San Carlos</td>
-              <td>Region VII</td>
-              <td>2026</td>
-              <td>92.1%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Angela Kristina Villanueva</td>
-              <td>LET</td>
-              <td>Ateneo de Manila University</td>
-              <td>NCR</td>
-              <td>2026</td>
-              <td>91.6%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Rafael Luis Tan</td>
-              <td>LET</td>
-              <td>University of Santo Tomas</td>
-              <td>NCR</td>
-              <td>2026</td>
-              <td>91.2%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Patricia Marie Gonzales</td>
-              <td>CSE-PPT</td>
-              <td>Polytechnic University of the Philippines</td>
-              <td>NCR</td>
-              <td>2025</td>
-              <td>Passed</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Gabriel Antonio Ramos</td>
-              <td>CSE-PPT</td>
-              <td>University of the Philippines - Diliman</td>
-              <td>NCR</td>
-              <td>2025</td>
-              <td>Passed</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Jose Miguel Mercado</td>
-              <td>NAPOLCOM</td>
-              <td>Philippine National Police Academy</td>
-              <td>NCR</td>
-              <td>2026</td>
-              <td>91.4%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Lara Bianca Hernandez</td>
-              <td>Nursing</td>
-              <td>University of Santo Tomas</td>
-              <td>NCR</td>
-              <td>2025</td>
-              <td>88.7%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Diego Francisco Cruz</td>
-              <td>CPA</td>
-              <td>De La Salle University</td>
-              <td>NCR</td>
-              <td>2025</td>
-              <td>92.3%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Beatrice Anne Flores</td>
-              <td>Architecture</td>
-              <td>University of the Philippines - Diliman</td>
-              <td>NCR</td>
-              <td>2026</td>
-              <td>89.5%</td>
-            </tr>
-            <tr class="searchable-row">
-              <td>Christian Paolo Villar</td>
-              <td>Psychometrician</td>
-              <td>Ateneo de Manila University</td>
-              <td>NCR</td>
-              <td>2025</td>
-              <td>87.2%</td>
-            </tr>
-          </tbody>
+          <tbody id="search-tbody"></tbody>
         </table>
       </div>
 
@@ -284,6 +160,55 @@
 
   <button class="back-to-top" aria-label="Back to top">↑</button>
 
+  <script src="assets/js/exams-data.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!window.examData) return;
+    var tbody = document.getElementById('search-tbody');
+    var examFilter = document.getElementById('exam-filter');
+    var totalRows = 0;
+    var examCounts = {};
+
+    Object.keys(window.examData).forEach(function(slug) {
+      var exam = window.examData[slug];
+      if (!exam || !exam.passersList || exam.passersList.length === 0) return;
+      var year = exam.month.match(/\d{4}/);
+      year = year ? year[0] : '';
+      var short = exam.short;
+      examCounts[short] = (examCounts[short] || 0) + exam.passersList.length;
+
+      exam.passersList.forEach(function(p) {
+        var tr = document.createElement('tr');
+        tr.className = 'searchable-row';
+        var nameHtml = p.rank && p.rank <= 3
+          ? '<strong>' + p.name + '</strong>'
+          : p.name;
+        tr.innerHTML =
+          '<td>' + nameHtml + '</td>' +
+          '<td>' + short + '</td>' +
+          '<td>' + (p.school || '—') + '</td>' +
+          '<td>' + (p.region || '—') + '</td>' +
+          '<td>' + year + '</td>' +
+          '<td>' + (p.rating || '—') + '</td>';
+        tbody.appendChild(tr);
+        totalRows++;
+      });
+    });
+
+    // Update stats
+    document.getElementById('stats-line').textContent =
+      'Showing ' + totalRows.toLocaleString() + ' passers across ' +
+      Object.keys(window.examData).length + ' exams. Type to filter live.';
+
+    // Populate exam filter
+    Object.keys(examCounts).sort().forEach(function(exam) {
+      var opt = document.createElement('option');
+      opt.value = exam;
+      opt.textContent = exam + ' (' + examCounts[exam].toLocaleString() + ')';
+      examFilter.appendChild(opt);
+    });
+  });
+  </script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
